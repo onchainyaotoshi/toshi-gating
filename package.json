@@ -1,6 +1,6 @@
 {
   "name": "toshi-gating",
-  "version": "1.2.2",
+  "version": "1.0.0",
   "description": "If you're developing utilities around toshi, feel free to use it",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
