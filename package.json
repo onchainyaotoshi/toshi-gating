@@ -1,0 +1,70 @@
+{
+  "name": "toshi-gating",
+  "version": "1.2.2",
+  "description": "If you're developing utilities around toshi, feel free to use it",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onchainyaotoshi/toshi-gating"
+  },
+  "scripts": {
+    "start": "node ./index.js",
+    "prebuild": "rimraf dist",
+    "build": "tsc --resolveJsonModule",
+    "test": "dotenv -e .env vitest run",
+    "release": "git add * && git-cz && git pull origin && git push origin"
+  },
+  "keywords": [
+    "toshi",
+    "token-gating",
+    "nft",
+    "web3",
+    "toshi-gating",
+    "base-chain",
+    "base"
+  ],
+  "engines": {
+    "node": ">=18.12.1"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "dist/**/*"
+  ],
+  "author": "yaotoshi",
+  "license": "MIT",
+  "dependencies": {
+    "@neynar/nodejs-sdk": "^1.14.0",
+    "@quicknode/sdk": "^2.2.2",
+    "commander": "^10.0.1",
+    "viem": "^2.9.6"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^10.0.3",
+    "@semantic-release/release-notes-generator": "^11.0.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.1",
+    "rimraf": "^5.0.5",
+    "semantic-release": "^21.0.2",
+    "typescript": "^5.4.3",
+    "vitest": "^1.4.0"
+  }
+}
